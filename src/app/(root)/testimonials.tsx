@@ -78,7 +78,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4">
-                &quot;Reliable, efficient, and always professional. CleanPro has
+                &quot;Reliable, efficient, and always professional. ACservice has
                 been our trusted partner for facility management for over 5
                 years.&quot;
               </p>
