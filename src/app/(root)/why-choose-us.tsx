@@ -1,3 +1,4 @@
+import CustomAnimatedNumber from "@/components/ui/animated-number";
 import { Clock, Shield, Users } from "lucide-react";
 
 const WhyChooseUs = () => {
@@ -64,27 +65,35 @@ const WhyChooseUs = () => {
           <div className="bg-muted/50 rounded-lg p-8">
             <div className="grid grid-cols-2 gap-8 text-center">
               <div>
-                <div className="text-primary mb-2 text-3xl font-bold">100+</div>
+                <div className="text-primary mb-2 text-3xl font-bold">
+                  <CustomAnimatedNumber to={100} />+
+                </div>
                 <div className="text-muted-foreground text-sm">
                   Enterprise Clients
                 </div>
               </div>
               <div>
                 <div className="text-primary mb-2 text-3xl font-bold">
-                  99.8%
+                  <CustomAnimatedNumber to={98} />%
                 </div>
                 <div className="text-muted-foreground text-sm">
                   Client Satisfaction
                 </div>
               </div>
               <div>
-                <div className="text-primary mb-2 text-3xl font-bold">10+</div>
+                <div className="text-primary mb-2 text-3xl font-bold">
+                  <CustomAnimatedNumber to={10} />+
+                </div>
                 <div className="text-muted-foreground text-sm">
                   Years Experience
                 </div>
               </div>
               <div>
-                <div className="text-primary mb-2 text-3xl font-bold">24/7</div>
+                <div className="text-primary mb-2 text-3xl font-bold">
+                  <CustomAnimatedNumber to={24} />
+                  /
+                  <CustomAnimatedNumber to={7} />
+                </div>
                 <div className="text-muted-foreground text-sm">
                   Support Available
                 </div>
