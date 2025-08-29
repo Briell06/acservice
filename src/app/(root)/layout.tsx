@@ -1,6 +1,5 @@
 import Footer from "@/components/footer";
 import NavBar from "../navbar";
-import CTA from "./cta";
 
 export default function RootLayout({
   children,
@@ -10,10 +9,9 @@ export default function RootLayout({
   return (
     <>
       <NavBar />
-      <main className="bg-background text-foreground container mx-auto min-h-screen px-4">
+      <main className="bg-background text-foreground min-h-screen">
         {children}
       </main>
-      <CTA />
       <Footer />
     </>
   );

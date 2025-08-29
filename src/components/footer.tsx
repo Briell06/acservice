@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <div className="mb-4 flex items-center space-x-2">
               <Building2 className="h-6 w-6" />
-              <span className="text-lg font-bold">CleanPro Enterprise</span>
+              <span className="text-lg font-bold">ACService Enterprise</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Professional cleaning services for enterprise clients. Reliable,
@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@cleanpro.com</span>
+                <span>info@acservice.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />

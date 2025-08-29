@@ -23,7 +23,7 @@ const CTA = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary-foreground bg-transparent"
             asChild
           >
             <a

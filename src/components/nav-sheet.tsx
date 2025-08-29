@@ -1,5 +1,5 @@
 import { navLinks } from "@/lib/constants";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./color-mode-switch";
@@ -52,7 +52,10 @@ const NavSheet = () => {
         </nav>
         <SheetFooter>
           <SheetClose asChild>
-            <Button>Close</Button>
+            <Button>
+              <X />
+              Close
+            </Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
