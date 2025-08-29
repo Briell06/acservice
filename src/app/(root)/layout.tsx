@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <>
       <NavBar />
-      <main className="bg-background text-foreground min-h-screen">
+      <main className="bg-background text-foreground container mx-auto min-h-screen px-4">
         {children}
       </main>
     </>
