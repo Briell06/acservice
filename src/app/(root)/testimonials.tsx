@@ -26,7 +26,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4">
-                &quot;CleanPro has transformed our office environment. Their
+                &quot; ACservice has transformed our office environment. Their
                 attention to detail and professional approach has impressed both
                 our staff and clients.&quot;
               </p>
