@@ -1,4 +1,5 @@
 import { Building2, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -19,17 +20,41 @@ const Footer = () => {
           <div>
             <h3 className="mb-4 font-semibold">Services</h3>
             <ul className="text-primary-foreground/80 space-y-2">
-              <li>Office Cleaning</li>
-              <li>Facility Management</li>
-              <li>Specialized Services</li>
-              <li>Emergency Response</li>
+              <li>
+                <Link
+                  className="hover:underline"
+                  href={"/services/#building-maintenance"}
+                >
+                  Building Maintenance & Cleaning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:underline"
+                  href={"/services/#house-maintenance"}
+                >
+                  House & Apartment Cleaning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:underline"
+                  href="/services/#painting-services"
+                >
+                  Interior Painting Services
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="mb-4 font-semibold">Company</h3>
             <ul className="text-primary-foreground/80 space-y-2">
-              <li>About Us</li>
+              <li>
+                <Link className="hover:underline" href={"/about"}>
+                  About Us
+                </Link>
+              </li>
               <li>Careers</li>
               <li>Certifications</li>
               <li>Case Studies</li>

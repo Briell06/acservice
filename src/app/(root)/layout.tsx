@@ -1,11 +1,8 @@
 import Footer from "@/components/footer";
 import NavBar from "../navbar";
+import { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <NavBar />

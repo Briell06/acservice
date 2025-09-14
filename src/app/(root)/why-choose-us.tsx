@@ -1,4 +1,4 @@
-import CustomAnimatedNumber from "@/components/ui/animated-number";
+import CustomAnimatedNumber from "@/components/animated-number";
 import { Clock, Shield, Users } from "lucide-react";
 
 const WhyChooseUs = () => {
@@ -7,7 +7,7 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="text-foreground mx-auto text-center text-3xl font-bold md:text-4xl">
+            <h2 className="text-foreground mx-auto mb-2 text-center text-3xl font-bold md:text-4xl">
               Why Leading Companies Choose ACServices?
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
               </div>
               <div>
                 <div className="text-primary mb-2 text-3xl font-bold">
-                  <CustomAnimatedNumber to={10} />+
+                  <CustomAnimatedNumber to={1} />+
                 </div>
                 <div className="text-muted-foreground text-sm">
                   Years Experience

@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -21,14 +22,19 @@ const Hero = () => {
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button
+              asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
-              Browse our Services
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <Link href="/services">
+                Main Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline">
-              About us
+            <Button asChild size="lg" variant="outline">
+              <Link href="/about">
+                About us <Users />
+              </Link>
             </Button>
           </div>
         </div>
