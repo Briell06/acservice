@@ -3,48 +3,61 @@ import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { PhoneInput } from "@/components/ui/phone-input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
-const formSchema = z.object({
-  fullName: z
-    .string({ error: "This camp is required" })
-    .min(1, { error: "Full name is required" }),
-  phonNumber: z.string().optional(),
-  email: z.email("Invalid email address"),
-  service: z.string(),
-  message: z.string().min(1, { error: "Message is required" }),
-});
+import { SendEmailAction } from "@/lib/actions";
+import { Loader } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { formSchema } from "@/lib/schemas";
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      fullName: "",
-      phonNumber: "",
+      name: "",
+      phoneNumber: "",
       email: "",
-      service: "",
+      service: undefined,
       message: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      console.log(values);
-      toast(
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>,
-      );
-    } catch (error) {
-      console.error("Form submission error", error);
-      toast.error("Failed to submit the form. Please try again.");
+  async function onSubmit() {
+    const formData = form.getValues();
+    const result = formSchema.safeParse(formData);
+    if (result.success) {
+      try {
+        await SendEmailAction(result.data);
+        toast.success("El correo fue enviado exitosamente");
+      } catch {
+        toast.error("Error al enviar el correo");
+      }
+    } else {
+      toast.error("Please fill out all fields");
     }
   }
 
@@ -65,7 +78,7 @@ export default function ContactForm() {
             <div className="grid max-md:space-y-8 md:grid-cols-2 md:gap-2">
               <FormField
                 control={form.control}
-                name="fullName"
+                name="name"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Full Name</FormLabel>
@@ -79,7 +92,7 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="phonNumber"
+                name="phoneNumber"
                 render={({ field }) => (
                   <FormItem className="flex flex-col items-start">
                     <FormLabel>Phone number</FormLabel>
@@ -120,7 +133,7 @@ export default function ContactForm() {
               name="service"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Service</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -173,8 +186,19 @@ export default function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
-              Send Message
+            <Button
+              type="submit"
+              disabled={form.formState.isSubmitting}
+              className="w-full"
+            >
+              {form.formState.isSubmitting ? (
+                <div className="flex gap-2">
+                  <Loader className="animate-spin" />
+                  Sending...
+                </div>
+              ) : (
+                "Send Message"
+              )}
             </Button>
           </form>
         </Form>
