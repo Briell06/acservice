@@ -25,9 +25,8 @@ const AboutSection = () => {
             <CardContent className="space-y-6">
               <p className="text-muted-foreground text-center text-lg">
                 We are a company specialized in the cleaning of residential
-                buildings with two years of experience, located in Miami-Dade
-                and Broward counties, and we have contracts with several luxury
-                buildings.
+                buildings with more than a year of experience, located in Miami,
+                and we have contracts with several luxury buildings.
               </p>
 
               <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -51,7 +50,7 @@ const AboutSection = () => {
                     Local Expertise
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    Serving Miami-Dade and Broward counties
+                    Serving al around Miami
                   </p>
                 </div>
 

@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Mail, MapPin, Phone } from "lucide-react";
 
 function ContactInfo() {
@@ -25,7 +19,7 @@ function ContactInfo() {
             </div>
             <div>
               <h3 className="text-foreground mb-1 font-semibold">Phone</h3>
-              <p className="text-muted-foreground">(555) 123-4567</p>
+              <p className="text-muted-foreground">+1 (786) 961-0028</p>
               <p className="text-muted-foreground text-sm">
                 Available 7 days a week, 8 AM - 8 PM
               </p>
@@ -38,7 +32,9 @@ function ContactInfo() {
             </div>
             <div>
               <h3 className="text-foreground mb-1 font-semibold">Email</h3>
-              <p className="text-muted-foreground">info@acservices.com</p>
+              <p className="text-muted-foreground text-sm">
+                areliscacerescleaningsolutions@gmail.com
+              </p>
               <p className="text-muted-foreground text-sm">
                 We respond within 24 hours
               </p>
@@ -53,10 +49,11 @@ function ContactInfo() {
               <h3 className="text-foreground mb-1 font-semibold">
                 Service Areas
               </h3>
-              <p className="text-muted-foreground">Miami-Dade County</p>
-              <p className="text-muted-foreground">Broward County</p>
-              <p className="text-muted-foreground text-sm">
-                Free estimates within service areas
+              <p className="text-muted-foreground">
+                Proudly serving South Florida, including Miami-Dade, Broward,
+                and Palm Beach counties. Our extensive coverage ensures
+                top-quality cleaning services across major metropolitan areas
+                and surrounding communities.
               </p>
             </div>
           </div>

@@ -16,8 +16,7 @@ export const SendEmailAction = async (data: TData) => {
   const { name, email, message, phoneNumber, service } = data;
   await resend.emails.send({
     from: "onboarding@resend.dev",
-    // to: "areliscacerescleaningsolutions@gmail.com",
-    to: "brielluh@gmail.com",
+    to: "areliscacerescleaningsolutions@gmail.com",
     subject: `New message from ${name}`,
     replyTo: email,
     react: ContactFormEmailTemplate({

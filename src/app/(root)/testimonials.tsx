@@ -26,7 +26,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4">
-                &quot; ACservice has transformed our office environment. Their
+                &quot; ACservices has transformed our office environment. Their
                 attention to detail and professional approach has impressed both
                 our staff and clients.&quot;
               </p>
@@ -78,8 +78,8 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4">
-                &quot;Reliable, efficient, and always professional. ACservice has
-                been our trusted partner for facility management for over 5
+                &quot;Reliable, efficient, and always professional. ACservices
+                has been our trusted partner for facility management for over 5
                 years.&quot;
               </p>
               <div>

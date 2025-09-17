@@ -19,16 +19,10 @@ const ServicesCTA = () => {
             variant="secondary"
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
           >
-            Get Free Estimate
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary-foreground/80 bg-transparent"
-          >
-            <Link href="/contact">Contact us now</Link>
+            <Link className="flex gap-2" href="/contact">
+              Contact us now
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>

@@ -18,7 +18,7 @@ const NavBar = () => {
               height={40}
               className="aspect-square rounded-full object-cover"
             />
-            <span className="text-primary text-2xl font-bold">ACService</span>
+            <span className="text-primary text-2xl font-bold">ACServices</span>
           </div>
           <nav className="hidden items-center space-x-8 md:flex">
             {navLinks.map((link) => (

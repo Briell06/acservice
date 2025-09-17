@@ -32,7 +32,7 @@ const NavSheet = () => {
           />
           <div className="flex justify-between">
             <SheetTitle className="text-primary inline-block text-2xl font-bold">
-              ACService
+              ACServices
             </SheetTitle>
             <ModeToggle />
           </div>

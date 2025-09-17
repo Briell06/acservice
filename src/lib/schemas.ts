@@ -6,6 +6,8 @@ export const formSchema = z.object({
     .min(1, { error: "Full name is required" }),
   phoneNumber: z.string().optional(),
   email: z.email("Invalid email address"),
-  service: z.enum(["building", "house", "painting", "multiple"]),
+  service: z.enum(["building", "house", "painting", "multiple"], {
+    error: "Please select a desired service",
+  }),
   message: z.string().min(1, { error: "Message is required" }),
 });

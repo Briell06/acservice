@@ -28,14 +28,10 @@ const CTA = () => {
             className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent"
             asChild
           >
-            <a
-              href="https://wa.me/15551234567"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/contact">
               <MessageCircleMore />
               Contact us now
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

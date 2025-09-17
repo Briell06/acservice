@@ -18,9 +18,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ACService",
+  title: {
+    default: "ACServices",
+    template: "%s | ACServices",
+  },
   description:
-    "ACService provides professional, enterprise-level cleaning solutions tailored for businesses and organizations. Our expert team ensures a spotless, healthy, and productive environment with reliable, high-quality service.",
+    "ACServices provides professional, enterprise-level cleaning solutions tailored for businesses and organizations. Our expert team ensures a spotless, healthy, and productive environment with reliable, high-quality service.",
 };
 
 export default function RootLayout({
@@ -33,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.className} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
         <Toaster position="top-right" />
