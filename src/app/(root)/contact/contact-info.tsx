@@ -10,7 +10,7 @@ import { CheckCircle, Mail, MapPin, Phone } from "lucide-react";
 
 function ContactInfo() {
   return (
-    <div className="space-y-8">
+    <div className="mx-auto w-[95%] space-y-8">
       <Card className="border-border">
         <CardHeader>
           <CardTitle className="text-2xl">Contact Information</CardTitle>
@@ -20,7 +20,7 @@ function ContactInfo() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-start gap-4">
-            <div className="bg-accent/10 rounded-lg p-2">
+            <div className="bg-accent/10 rounded-lg">
               <Phone className="text-primary h-6 w-6" />
             </div>
             <div>
@@ -33,7 +33,7 @@ function ContactInfo() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="bg-accent/10 rounded-lg p-2">
+            <div className="bg-accent/10 rounded-lg">
               <Mail className="text-primary h-6 w-6" />
             </div>
             <div>
@@ -48,7 +48,7 @@ function ContactInfo() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="bg-accent/10 rounded-lg p-2">
+            <div className="bg-accent/10 rounded-lg">
               <MapPin className="text-primary h-6 w-6" />
             </div>
             <div>

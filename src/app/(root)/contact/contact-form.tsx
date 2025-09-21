@@ -62,7 +62,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="border-border">
+    <Card className="border-border mx-auto max-md:w-[95%]">
       <CardHeader>
         <CardTitle className="text-2xl">Send Us a Message</CardTitle>
         <CardDescription>
